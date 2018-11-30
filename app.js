@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require("express");
 const app = express();
 const request = require("request");
@@ -12,3 +14,11 @@ request(
 
   }
 )
+
+app.get('/', sendData);
+
+function sendData(request, response) {
+  response.send('hi')
+}
+
+app.listen(3000)
