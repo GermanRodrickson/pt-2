@@ -3,14 +3,17 @@
 const express = require("express");
 const app = express();
 const request = require("request");
+const where = require("lodash.where");
 
 request(
-  "http://www.mocky.io/v2/580891a4100000e8242b75c5",
+  "http://www.mocky.io/v2/5808862710000087232b75ac",
   (err, res, body) => {
     if (err) {
       return console.log(err);
     }
     const data = JSON.parse(body)
+    const filtered = where(data.clients, { role : "admin"})
+    console.log(filtered)
 
   }
 )
@@ -18,7 +21,7 @@ request(
 app.get('/', sendData);
 
 function sendData(request, response) {
-  response.send('hi')
+  response.send('')
 }
 
 app.listen(3000)
