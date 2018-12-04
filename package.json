@@ -1,5 +1,5 @@
 {
-  "name": "altran-back",
+  "name": "altran-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,12 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "express": "^4.16.4",
-    "lodash": "^4.17.11",
-    "lodash.where": "^3.1.0",
+    "should": "^13.2.3",
+    "supertest": "^3.3.0"
+  },
+  "dependencies": {
     "request": "^2.88.0"
   }
 }
